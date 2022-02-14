@@ -3,7 +3,7 @@ FROM node:14
 WORKDIR /web
 
 COPY package*.json /web/
-RUN npm install
+RUN npm install && npm cache clean --force
 
 COPY . .
 
